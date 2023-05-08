@@ -1,52 +1,60 @@
-*{
+body{
     margin: 0;
     padding: 0;
-}
-body{
-    background-image: url("background.jpg");
-    background-size: 100% 100%;
-}
-
-
-
-main{
-    display: flex;
-    justify-content: center;
-}
-
-@font-face {
-    font-family: mineFont;
-    src: url("Minecrafter.Alt.ttf");
-}
-
-.hour-number, .minute-number, .second-number{
-    width: 30%;
-    height: 50vh;
-    margin: 10px;
-    border-radius: 20px;
-    background-image: url("glass.png");
-    background-size: 103% 103%;
-    background-position: center;
-    box-shadow:inset  0 0 10px white;
-    font-size: 13vw;
-    padding-top: 80px;
     box-sizing: border-box;
-    font-family: mineFont;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-section{
+.container{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: rgb(18, 4, 82);
+}
+
+.bolhas{
+    display: flex;
+    position: absolute;
+}
+
+.bolhas span{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ffff00;
+    margin: 0 6px;
+    box-shadow: 0 0 0 7px #ffff0044,0 0 50px #ffff00, 0 0 100px #ffff00;
+    animation: anima calc(150s / var(--i)) linear infinite;
+}
+
+.bolhas span:nth-of-type(even){
+    background-color: aqua;
+    box-shadow: 0 0 0 7px #00ffff44,0 0 50px #00ffff,0 0 100px #00ffff;
+}
+
+@keyframes anima{
+    0%{transform: translateY(-30px) scale(0);}
+    100%{transform:  translateY(103vh) scale(1);}
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh;
+    position: absolute;
+    width: 100%;
+}
+.clock div{
+    width: 20%;
+    height: 50vh;
+    border-radius: 15px;
+    margin: 0 10px;
+    color: rgb(0, 0, 0);
+    font-size: clamp(8px, 15em, 8rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: grid;
     place-items: center;
-    color: white;
-    font-family: mineFont;
-}
-input{
-    text-align: center;
-    background: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid white;
-    color: white;
 }
+
