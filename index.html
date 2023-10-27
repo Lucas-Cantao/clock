@@ -1,67 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Clock</title>
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-    <div class="container">
-        <div>
-            <div class="bolhas">
-                <span style="--i:11"></span>
-                <span style="--i:21"></span>
-                <span style="--i:13"></span>
-                <span style="--i:17"></span>
-                <span style="--i:26"></span>
-                <span style="--i:12"></span>
-                <span style="--i:19"></span>
-                <span style="--i:20"></span>
-                <span style="--i:7"></span>
-                <span style="--i:13"></span>
-                
-                <span style="--i:21"></span>
-                <span style="--i:17"></span>
-                <span style="--i:9"></span>
-                <span style="--i:7"></span>
-                <span style="--i:23"></span>
-                <span style="--i:11"></span>
-                <span style="--i:9"></span>
-                <span style="--i:19"></span>
-                <span style="--i:25"></span>
-                <span style="--i:13"></span>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popular Movies</title>
 
-                <span style="--i:5"></span>
-                <span style="--i:16"></span>
-                <span style="--i:30"></span>
-                <span style="--i:3"></span>
-                <span style="--i:9"></span>
-                <span style="--i:15"></span>
-                <span style="--i:20"></span>
-                <span style="--i:27"></span>
-                <span style="--i:22"></span>
-                <span style="--i:14"></span>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-                <span style="--i:24"></span>
-                <span style="--i:11"></span>
-                <span style="--i:14"></span>
-                <span style="--i:2"></span>
-                <span style="--i:12"></span>
-                <span style="--i:28"></span>
-                <span style="--i:10"></span>
-                <span style="--i:26"></span>
-                <span style="--i:13"></span>
-                <span style="--i:21"></span>
-            </div>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/cabecalho.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1 class="cabecalho__titulo">Filmes Populares</h1>
+      
+      
+      <div class="cabecalho__pesquisa">
+        <input
+          type="text"
+          class="cabecalho__pesquisa-input"
+          placeholder="Digite algum filme para pesquisar..."
+        />
+        <span class="cabecalho__pesquisa-lupa">
+          <img src="img/search-icon.svg" alt="" />
+        </span>
+      </div>
+      
+      
+      
+
+      <label class="cabecalho__checkbox">
+        <input type="checkbox" id="cabecalho__checkbox"/>
+        Mostrar meus filmes favoritos apenas
+      </label>
+    </header>
+
+    <section id="filmes">
+    </section>
+    <section class="card__lista-vazia">Você ainda não adicionou nenhum filme a sua lista de favoritos!</section>
+    <!--
+        <section class="cards">
+
+        
+      <div class="cards__parte1">
+        <img src="img/image 1.png" alt="Capa" class="cards__parte1-capa" />
+      </div>
+      <div class="cards__parte2">
+        <h2 class="cards__parte2-titulo">Titulo Completo (Ano)</h2>
+        <div class="cards__parte2-details">
+          <div>
+            <img src="img/Star.svg" alt="star" class="cards__parte2-icon" />
+            <h2 class="cards__parte2-text">9.2</h2>
+          </div>
+          <div>
+            <img src="img/Heart.svg" alt="star" class="cards__parte2-icon" />
+            <h2 class="cards__parte2-text">Favoritar</h2>
+          </div>
         </div>
-        <div class="clock">
-            <div class="hora"></div>
-            <div class="minuto"></div>
-            <div class="segundo"></div>
-        </div>
-    </div>
-    <script src="script/script.js"></script>
-</body>
+      </div>
+      <div class="cards__parte3">
+        <p class="cards__parte3-texto">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      </div>
+      
+    </section>
+-->
+
+    <script src="js/script.js" type="module"></script>
+    <script src="js/filtro.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+  </body>
 </html>
