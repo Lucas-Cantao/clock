@@ -1,32 +1,34 @@
+.pesquisa
+
+{
+    display: flex;
+    padding: 2px;
+}
+
 .cabecalho {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 20px;
 }
 
 .cabecalho__titulo {
-    font-size: 36px;
-    font-weight: 600;
-    line-height: normal;
+    font-size: clamp(16px, 2vh + 2vw, 32px);
+    color: #eeeeee;
     cursor: pointer;
+    font-family: 'Coolvetica', Arial, Helvetica, sans-serif;
 }
 
 .cabecalho__pesquisa {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-shrink: 0;
-
-        
-    width: 634px;
-    padding: 26px 30px 26px 24px;
-
-    border-radius: 8px;
-    opacity: 0.25;
-    background: #fff;
-
-    margin-top: 48px;
-    margin-bottom: 30px;
+    width: 22vw;
+    min-width: 200px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: #eeeeee;
 }
 
 .cabecalho__pesquisa-input {
@@ -34,11 +36,9 @@
     height: 100%;
     border: none;
     background: transparent;
-    color: var(--dark-gray);
+    color: #000;
     font-size: 18px;
     font-weight: 500;
-    line-height: normal;
-    outline: none;
 }
 
 .cabecalho__pesquisa-input:focus {
@@ -52,31 +52,23 @@
     cursor: pointer;
     pointer-events: pointer;
 }
-.cabecalho__checkbox {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: normal;
+
+
+.login
+
+{
+    margin-left: 15px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #4F0006;
+    border-radius: 6px;
+    color: #fff;
+    width: 70px;
+    height: 40px;
+    display: grid;
+    place-content: center;
 }
 
-.cabecalho__checkbox input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    flex-shrink: 0;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-radius: 4px;
-    border: 2px solid #706EA8;
-    outline: none;
-    cursor: pointer;
-}
-
-.cabecalho__checkbox input[type="checkbox"]:checked {
-    background: #706EA8 url(../img/vector__checket.svg) no-repeat center / 80%;
-}
 
 
 @media screen and (min-width: 375px) and (max-width: 1024px) {
@@ -86,9 +78,4 @@
     .cabecalho__pesquisa {
         width: 90%;
     }
-    .cabecalho__checkbox {
-        font-size: 16px;
-    }
-
-
 }

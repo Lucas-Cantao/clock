@@ -1,7 +1,7 @@
 import { InserirFilmesNaTela } from "./main.js";
 
 export const apiKey = '5d93ad67ab4499fded984604a2f5c80b';
-let movies = []; 
+let movies = [];
 
 fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pt-BR`)
   .then(response => response.json())

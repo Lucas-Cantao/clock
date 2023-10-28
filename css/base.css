@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #17162E;
+    --bg-color: #000000;
     --branco: #FFFFFF;
     --favorite-color: #BA0707;
     --avaliacao-color: #D7A82F;
@@ -9,23 +9,24 @@
     --dark-gray: #8A8A8A;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 48px;
-
-    background: var(--bg-color);
-    padding: 2% 6%;
-
-
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: normal;
-    color: var(--branco);
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(font/coolvetica\ rg.otf);
 }
 
-#filmes {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+
+*
+
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/POSTER.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    box-shadow: inset 20vw -50px 40px #270100;
 }
